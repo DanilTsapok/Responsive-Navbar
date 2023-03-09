@@ -1,0 +1,138 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-style: bold;
+}
+
+body{
+    height: 100vh;
+    background-image: url('fon.jpeg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+}
+
+li{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+    color: #fff;
+    font-size: 1rem;
+}
+
+a:hover{
+    transition: 0.3s ease-in-out;
+    color: orange;
+}
+header{
+    position: relative;
+    padding: 0 2rem;
+
+}
+.navbar{
+    width: 100%;
+    height: 60px;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+img{
+    width: 32px;
+    height: 32px;
+}
+.navbar .logo a{
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.navbar .links{
+    display: flex;
+    gap: 2rem;
+    
+}
+
+.navbar .toggle_btn{
+   display: none;
+   cursor: pointer;
+
+}
+.action_btn{
+    background-color: orange;
+    color: #fff;
+    padding:  0.5rem 1rem;
+    border: none;
+    outline:none;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    cursor: pointer;
+    
+}
+.action_btn:hover{
+    scale: 1.05;
+    color: #fff;
+}
+.action_btn:active{
+    scale: 0.9s;
+}
+
+
+.dropdown_menu{
+    display: none;
+    right: 2rem;
+    margin:auto;
+    height: 0px;
+    width: 300px;
+    background: rgba(255,255,255, 0.2) ;
+    backdrop-filter: blur(15px);
+    border-radius:  10px;
+    overflow: hidden;
+    transition: 1.8s ease-in-out;
+}
+.dropdown_menu.open{
+    height:240px;
+}
+.dropdown_menu li{
+    padding: 0.7rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.dropdown_menu .action_btn{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+    font-size: 35px;
+    color: rgba(255, 255, 255,0.7);
+    text-decoration: underline;
+    overflow: hidden;
+}
+@media (max-width: 700px) {
+    .navbar .links, .navbar .action_btn{
+        display: none;
+        
+    }
+    .navbar .toggle_btn{
+       display: block;
+     
+     }
+     .dropdown_menu{
+        display: block;
+        
+     }
+     .main{
+        overflow: hidden;
+     }
+}
